@@ -393,6 +393,54 @@ input[type="text"] {
     max-width: 400px;
     margin: 30px auto; 
   }
+
+  .about-content {
+    max-width: 95%;  
+    padding: 0 30px;  
+  }
+
+  .about-content p {
+    font-size: 0.67rem; 
+    line-height: 1.4;   
+  }
+
+  .about-content ul {
+    padding-left: 0;      
+    margin-left: 0;        
+    list-style-position: inside; 
+  }
+
+  .about-content ul li {
+    font-size: 0.67rem;
+    margin-bottom: 1px;
+    line-height: 1.4;
+  }
+
+  .about-content h3 {
+    font-size: 1rem;  
+  }
+}
+
+@media (max-width: 375px) {
+  .about-content {
+    padding: 0 20px;  
+  }
+  .about-content p {
+    font-size: 0.63rem; 
+  }
+  .about-content ul li {
+    font-size: 0.63rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .about-content {
+    padding: 0 15px;
+  }
+  .about-content p,
+  .about-content ul li {
+    font-size: 0.6rem;
+  }
 }
 
 
