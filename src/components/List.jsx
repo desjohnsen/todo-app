@@ -38,8 +38,14 @@ const List = () => {
     setTasks([...tasks, { text: trimmedTask, checked: false }]);
   };
 
+  const clearTasks = () => {
+    setTasks([]);
+  };
+
   const toggleCheck = (index) => {
-    setTasks(tasks.map((task, i) => (i === index ? { ...task, checked: !task.checked } : task)));
+    setTasks(tasks.map((task, i) =>
+      i === index ? { ...task, checked: !task.checked } : task
+    ));
   };
 
   const removeTask = (index) => {
@@ -50,6 +56,7 @@ const List = () => {
   return (
     <section className="to-do-list">
       <h2>TODO</h2>
+
       {showConfetti && (
         <div className="confetti-container">
           <div className="confetti">🎉</div>
@@ -60,8 +67,12 @@ const List = () => {
           <div className="confetti">🎉</div>
         </div>
       )}
-      {tasks.length > 0 && tasks.every(task => task.checked) && <div className="completed-message">All tasks are done! 🎉</div>}
-      <TaskAdd addTask={addTask} />
+
+      {tasks.length > 0 && tasks.every(task => task.checked) && (
+        <div className="completed-message">All tasks are done! 🎉</div>
+      )}
+
+      <TaskAdd addTask={addTask} clearTasks={clearTasks} />
       <TaskToggle tasks={tasks} toggleCheck={toggleCheck} removeTask={removeTask} />
     </section>
   );

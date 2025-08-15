@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const TaskAdd = ({ addTask }) => {
+const TaskAdd = ({ addTask, clearTasks }) => {
   const [newTask, setNewTask] = useState("");
 
   function handleInputChange(event) {
@@ -8,8 +8,10 @@ const TaskAdd = ({ addTask }) => {
   }
 
   function handleAddTask() {
-    addTask(newTask);
-    setNewTask("");
+    if (newTask.trim() !== "") {
+      addTask(newTask.trim());
+      setNewTask("");
+    }
   }
 
   return (
@@ -22,6 +24,9 @@ const TaskAdd = ({ addTask }) => {
       />
       <button className="add-button" onClick={handleAddTask}>
         Add
+      </button>
+      <button className="add-button" onClick={clearTasks}>
+        Clear
       </button>
     </div>
   );
