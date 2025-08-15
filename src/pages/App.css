@@ -90,13 +90,18 @@ input[type="text"] {
   background-color: white;
   color: black;
   padding: 0 5px;
-  margin-left: 10px;
+  margin: 0 4px;
+
 }
 
 .add-button:hover,
 .clear-button:hover {
   background-color: black;
   color: white;
+}
+
+.add-task input {
+  margin-right: 10px; 
 }
 
 .to-do-list {
@@ -302,6 +307,7 @@ input[type="text"] {
     padding: 5px 8px;
     margin-top: 0;
     width: auto;
+    margin: 0 4px;
   }
 
   .add-task {
@@ -310,6 +316,10 @@ input[type="text"] {
     align-items: center;
     justify-content: center; 
     width: 100%; 
+  }
+
+  .add-task input {
+    margin-right: 9px; 
   }
 
   .to-do-list {
