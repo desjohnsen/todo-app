@@ -25,7 +25,7 @@ const TaskAdd = ({ addTask, clearTasks }) => {
       <button className="add-button" onClick={handleAddTask}>
         Add
       </button>
-      <button className="add-button" onClick={clearTasks}>
+      <button className="clear-button" onClick={clearTasks}>
         Clear
       </button>
     </div>
