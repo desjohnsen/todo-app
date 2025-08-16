@@ -201,7 +201,7 @@ input[type="text"] {
 
 .confetti-container {
   position: absolute;
-  top: 50%;
+  top: 47.5%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -370,6 +370,11 @@ input[type="text"] {
 
   .about-content h3 {
     font-size: 1rem;  
+  }
+
+  .confetti-container {
+    top: 41%;
+    left: 50%;
   }
 }
 
